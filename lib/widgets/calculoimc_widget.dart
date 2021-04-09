@@ -61,7 +61,7 @@ class _CalculoImcWidgetState extends State<CalculoImcWidget> {
   void _calculariac() {
     double altura = double.parse(alturacontroller.text) / 100;
     double circunferencia = double.parse(circunferenciacontroller.text);
-    double iac = circunferencia / altura * sqrt(altura);
+    double iac = (circunferencia / (altura * sqrt(altura))) - 18;
 
     setState(() {
       _resultadoImc = null;
